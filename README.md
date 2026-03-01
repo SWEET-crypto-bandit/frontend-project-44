@@ -66,11 +66,11 @@ brain-prime
 
 Для каждой игры должны быть записаны примеры с **успешным** и **неуспешным** прохождением:
 
-- **brain-even**: https://asciinema.org/a/0p3zZ3HEKezrGC7M
-- **brain-calc**: *добавьте ссылку на asciinema или скриншоты*
-- **brain-gcd**: *добавьте ссылку на asciinema или скриншоты*
-- **brain-progression**: *добавьте ссылку на asciinema или скриншоты*
-- **brain-prime**: *добавьте ссылку на asciinema или скриншоты*
+- **brain-even**: https://imgur.com/a/KAMcWNk
+- **brain-calc**: https://imgur.com/a/LCKz6OY
+- **brain-gcd**: https://imgur.com/a/X90yjCf
+- **brain-progression**: https://imgur.com/a/rJN4luW
+- **brain-prime**: https://imgur.com/a/N2hCsau
 
 Если вы используете Windows, допускается добавить скриншоты вместо asciinema.
 
