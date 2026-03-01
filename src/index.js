@@ -1,7 +1,7 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 const start = (rules, tool, prav) => {
-  console.log("Welcome to the Brain Games!");
-  const name = readlineSync.question("May I have your name?");
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name?');
   console.log(`Hello, ${name}!`);
   console.log(prav); // Для красоты по базе
 
@@ -12,7 +12,7 @@ const start = (rules, tool, prav) => {
 
     if (questio === rules(i)) {
       // модуль проверки ответа
-      console.log("Correct!");
+      console.log('Correct!');
     } else {
       console.log(
         `'${questio}' is wrong answer ;(. Correct answer was '${rules(i)}'.`,

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import start from "../index.js";
+import start from '../index.js';
 const util = "What is the result of the expression?";
 
 const even = (n) => {
