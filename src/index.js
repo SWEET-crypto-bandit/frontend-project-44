@@ -13,7 +13,8 @@ const start = (rules, tool, prav) => {
 
     if (questio === rules(i)) {
       console.log('Correct!')
-    } else {
+    }
+    if (questio !== rules(i)) {
       console.log(`'${questio}' is wrong answer ;(. Correct answer was '${rules(i)}'.`)
       console.log(`Let's try again, ${name}!`)
       return

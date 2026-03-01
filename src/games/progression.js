@@ -24,7 +24,8 @@ const even = (question) => {
   let result
   if (hiddenIndex === 0) {
     result = Number(progression[1]) - step
-  } else {
+  }
+  if (hiddenIndex !== 0) {
     result = Number(progression[hiddenIndex - 1]) + step
   }
 
