@@ -1,52 +1,52 @@
 #!/usr/bin/env node
 
-import start from '../index.js';
+import start from '../index.js'
 
-const util = 'What number is missing in the progression?';
+const util = 'What number is missing in the progression?'
 
 const even = (question) => {
-  const progression = question.split(' ');
-  const hiddenIndex = progression.indexOf('..');
+  const progression = question.split(' ')
+  const hiddenIndex = progression.indexOf('..')
   
-  let step = 0;
+  let step = 0
   for (let i = 0; i < progression.length - 1; i += 1) {
     if (progression[i] !== '..' && progression[i + 1] !== '..') {
-      step = Number(progression[i + 1]) - Number(progression[i]);
-      break;
+      step = Number(progression[i + 1]) - Number(progression[i])
+      break
     }
   }
   
   if (step === 0) {
-    const numbers = progression.map(Number).filter((n) => !Number.isNaN(n));
-    step = (numbers[numbers.length - 1] - numbers[0]) / (numbers.length - 1);
+    const numbers = progression.map(Number).filter((n) => !Number.isNaN(n))
+    step = (numbers[numbers.length - 1] - numbers[0]) / (numbers.length - 1)
   }
   
-  let result;
+  let result
   if (hiddenIndex === 0) {
-    result = Number(progression[1]) - step;
+    result = Number(progression[1]) - step
   } else {
-    result = Number(progression[hiddenIndex - 1]) + step;
+    result = Number(progression[hiddenIndex - 1]) + step
   }
   
-  return String(result);
-};
+  return String(result)
+}
 
 const toll = () => {
-  const length = Math.floor(Math.random() * 11) + 5;
-  const startNum = Math.floor(Math.random() * 50) + 1;
-  const step = Math.floor(Math.random() * 10) + 1;
-  const hiddenIndex = Math.floor(Math.random() * length);
+  const length = Math.floor(Math.random() * 11) + 5
+  const startNum = Math.floor(Math.random() * 50) + 1
+  const step = Math.floor(Math.random() * 10) + 1
+  const hiddenIndex = Math.floor(Math.random() * length)
 
-  const progression = [];
+  const progression = []
   for (let i = 0; i < length; i += 1) {
-    progression.push(startNum + i * step);
+    progression.push(startNum + i * step)
   }
-  progression[hiddenIndex] = '..';
-  return progression.join(' ');
-};
+  progression[hiddenIndex] = '..'
+  return progression.join(' ')
+}
 
 export function calk4() {
-  start(even, toll, util);
+  start(even, toll, util)
 }
 
 
