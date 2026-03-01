@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { chat } from "../games/cli.js";
-chat()
+import { calk } from "../src/games/calc.js"
+calk()
 
 
 
