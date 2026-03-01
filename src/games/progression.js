@@ -7,12 +7,23 @@ const util = 'What number is missing in the progression?';
 const even = (question) => {
   const progression = question.split(' ');
   const hiddenIndex = progression.indexOf('..');
-  const numbers = progression.map(Number).filter((n) => !Number.isNaN(n));
-  const step = numbers[1] - numbers[0];
+  
+  let step = 0;
+  for (let i = 0; i < progression.length - 1; i += 1) {
+    if (progression[i] !== '..' && progression[i + 1] !== '..') {
+      step = Number(progression[i + 1]) - Number(progression[i]);
+      break;
+    }
+  }
+  
+  if (step === 0) {
+    const numbers = progression.map(Number).filter((n) => !Number.isNaN(n));
+    step = (numbers[numbers.length - 1] - numbers[0]) / (numbers.length - 1);
+  }
   
   let result;
   if (hiddenIndex === 0) {
-    result = numbers[0] - step;
+    result = Number(progression[1]) - step;
   } else {
     result = Number(progression[hiddenIndex - 1]) + step;
   }
