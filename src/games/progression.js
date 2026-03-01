@@ -48,5 +48,3 @@ const toll = () => {
 export function calk4() {
   start(even, toll, util)
 }
-
-
