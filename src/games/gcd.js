@@ -8,7 +8,7 @@ const toll = () => {
 }
 
 const even = (question) => {
-  const [a, b] = question.split(" ").map(Number)
+  const [a, b] = question.split(' ').map(Number)
   const gcd = (x, y) => {
     while (y !== 0) {
       const temp = y

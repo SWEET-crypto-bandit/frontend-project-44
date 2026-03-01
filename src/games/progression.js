@@ -7,7 +7,7 @@ const util = 'What number is missing in the progression?'
 const even = (question) => {
   const progression = question.split(' ')
   const hiddenIndex = progression.indexOf('..')
-  
+
   let step = 0
   for (let i = 0; i < progression.length - 1; i += 1) {
     if (progression[i] !== '..' && progression[i + 1] !== '..') {
@@ -15,19 +15,19 @@ const even = (question) => {
       break
     }
   }
-  
+
   if (step === 0) {
-    const numbers = progression.map(Number).filter((n) => !Number.isNaN(n))
+    const numbers = progression.map(Number).filter(n => !Number.isNaN(n))
     step = (numbers[numbers.length - 1] - numbers[0]) / (numbers.length - 1)
   }
-  
+
   let result
   if (hiddenIndex === 0) {
     result = Number(progression[1]) - step
   } else {
     result = Number(progression[hiddenIndex - 1]) + step
   }
-  
+
   return String(result)
 }
 

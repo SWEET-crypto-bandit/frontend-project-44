@@ -13,7 +13,7 @@ export function calk3() {
   }
 
   const toll = () => {
-    const num = Math.floor(Math.random() * 100) + 1;
+    const num = Math.floor(Math.random() * 100) + 1
     return String(num)
   }
 
