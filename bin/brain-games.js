@@ -1,4 +1,3 @@
 #!/usr/bin/env node
-import { chat } from "../src/games/cli.js"
-chat()
-
+import { chat } from "../src/games/cli.js";
+chat();

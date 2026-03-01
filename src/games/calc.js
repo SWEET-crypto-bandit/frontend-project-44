@@ -1,12 +1,11 @@
 #!/usr/bin/env node
-import start from '../index.js'
-const util = 'What is the result of the expression?';
+import start from "../index.js";
+const util = "What is the result of the expression?";
 
 const even = (n) => {
   const utog = eval(n);
   return `${utog}`;
 };
-
 
 const toll = () => {
   const one = Math.floor(Math.random() * 100);
@@ -28,4 +27,3 @@ const toll = () => {
 export function calk() {
   start(even, toll, util);
 }
-
